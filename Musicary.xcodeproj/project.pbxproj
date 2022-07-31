@@ -13,6 +13,8 @@
 		3E21B79C2895150200DA097A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E21B79A2895150200DA097A /* Main.storyboard */; };
 		3E21B79E2895150200DA097A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E21B79D2895150200DA097A /* Assets.xcassets */; };
 		3E21B7A12895150200DA097A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E21B79F2895150200DA097A /* LaunchScreen.storyboard */; };
+		3E21B7A928951FED00DA097A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E21B7A828951FED00DA097A /* GoogleService-Info.plist */; };
+		3E21B7AC289673D200DA097A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3E21B7AB289673D200DA097A /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		3E21B79D2895150200DA097A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E21B7A02895150200DA097A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E21B7A22895150200DA097A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E21B7A828951FED00DA097A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E21B7AC289673D200DA097A /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 		3E21B7932895150200DA097A /* Musicary */ = {
 			isa = PBXGroup;
 			children = (
+				3E21B7A828951FED00DA097A /* GoogleService-Info.plist */,
 				3E21B7942895150200DA097A /* AppDelegate.swift */,
 				3E21B7962895150200DA097A /* SceneDelegate.swift */,
 				3E21B7982895150200DA097A /* ViewController.swift */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = Musicary;
+			packageProductDependencies = (
+				3E21B7AB289673D200DA097A /* FirebaseDatabase */,
+			);
 			productName = Musicary;
 			productReference = 3E21B7912895150200DA097A /* Musicary.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 3E21B7882895150100DA097A;
+			packageReferences = (
+				3E21B7AA289673D200DA097A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3E21B7922895150200DA097A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E21B7A12895150200DA097A /* LaunchScreen.storyboard in Resources */,
+				3E21B7A928951FED00DA097A /* GoogleService-Info.plist in Resources */,
 				3E21B79E2895150200DA097A /* Assets.xcassets in Resources */,
 				3E21B79C2895150200DA097A /* Main.storyboard in Resources */,
 			);
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E21B7AA289673D200DA097A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E21B7AB289673D200DA097A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E21B7AA289673D200DA097A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E21B7892895150100DA097A /* Project object */;
 }
