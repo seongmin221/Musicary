@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class MainViewController: ViewController {
+    
+    // MARK: - properties
+    
+    
+    // MARK: - init
+    
+    
+    // MARK: - configures
+}
